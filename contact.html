@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-nous</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+}
+.navbar ul li a{
+    background-color: white;
+    width: 60px;
+    flex-direction: none;
+    justify-content: center;
+    justify-content: space-between;
+    text-decoration: none;
+    padding: 8px 16px;
+    background-color: #ffffff;
+    color: #000000;   
+    border-radius: 22px;
+    box-shadow: 2px 2px 20px rgba(0.0.0.0.3);
+}
+
+.navbar ul li a:hover{
+    transition: 0.25s;
+    background: rgb(56, 130, 209);
+    color: rgb(255, 248, 248);
+}
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            
+        }
+        .container>h1 {
+            text-align: center;
+            color: #444343;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            margin-bottom: 20px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        button {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        header  {
+          background-color:black;
+          color: rgb(255, 255, 255);
+          text-align: center;
+          padding: 20px 0;
+        }
+
+h3{
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 5px;
+
+}
+
+iframe{
+    border-width: 0;
+    padding-bottom: 15px;
+    padding-left: 375px;
+    padding-right: 200px;
+}
+
+footer {
+    text-align: center; 
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px 0 ;
+    margin-top: 20px ;
+}
+
+
+.ResauxSociaux a {
+    margin: 0 3px; 
+}
+.ResauxSociaux p{
+    font-size: small;
+    margin-left: 20px;
+}
+
+.ResauxSociaux a img {
+        height: 30px;
+        width:  30px;
+        border-radius: 15px;
+    
+
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Le Trio Épicurien</h1>
+        <nav class="navbar" align="center">
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <a href="index.html" class="button">Page d'accueil</a>
+   <main id="contact">
+    <div class="container">
+        <h1>Contactez-nous</h1>
+        <form action="contact@letrioepicurien.com" method="post">
+            <label for="email">Adresse e-mail :</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
+   </main>    
+   
+  <h3> Trouvez notre adresse sur google maps : </h3>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d388.48167603878574!2d4.056642319548041!3d36.70044804317956!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128dc8109e92311f%3A0x523d58808cc1f9b6!2sBastos%2C%20Tizi%20Ouzou!5e0!3m2!1sfr!2sdz!4v1715370277561!5m2!1sfr!2sdz" width="600" height="450"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    <footer>
+        <h4 align="left">Adresse : Bastos, Tizi Ouzou</h4>
+        <h1 align="left">Le restaurant Le Trio Épicurien</h1>
+        <div class="ResauxSociaux">
+           
+            <h2>Suivez-nous </h2>
+            <a href="www.facebook.com" target="_blank" ><img src="../images/Logo-FB.png" alt="Facebook" ></a>
+            <a href="www.instagram.com" target="_blank"><img src="../images/Logo instagram.png" alt="Instagram" ></a>
+            <a href="www.twitter.com" target="_blank"><img src="../images/logo-X.png" alt="Twitter"></a>
+            <p align="left">&copy; 2024 Le Trio Épicurien.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
