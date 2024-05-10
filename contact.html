@@ -129,19 +129,57 @@ footer {
     
 
 }
+        
+header  {
+    background-color:black;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 20px 0;
+}
+.navbar ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+}
+.navbar ul li a{
+    background-color: white;
+    width: 60px;
+    flex-direction: none;
+    justify-content: center;
+    justify-content: space-between;
+    text-decoration: none;
+    padding: 8px 16px;
+    background-color: #ffffff;
+    color: #000000;   
+    border-radius: 22px;
+    box-shadow: 2px 2px 20px rgba(0.0.0.0.3);
+}
+
+.navbar ul li a:hover{
+    transition: 0.25s;
+    background: rgb(56, 130, 209);
+    color: rgb(255, 248, 248);
+}
+
     </style>
 </head>
 <body>
-    <header>
-        <h1>Le Trio Épicurien</h1>
-        <nav class="navbar" align="center">
-            <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+     <header>
+    <div class="container">
+      <h1 class="logo"> Restaurant Marzouk</h1>
+  
+      <nav>
+        <ul>
+          <li><a href="main.html"target="self">Home</a></li>
+          <li><a href="menu.html"target="self">Menu</a></li>
+          <li><a href="contact.html"target="self">Contact US</a></li>
+        </ul>
+      </nav>
+    </div>
+   
+
+      </header>
     <a href="index.html" class="button">Page d'accueil</a>
    <main id="contact">
     <div class="container">
