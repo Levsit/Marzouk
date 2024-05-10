@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+
+    *, *::before, *::after {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+
+header  {
+    background-color:black;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+body {
+  
+  background-image:url(menu.png);
+  font-weight: 600;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0;
+	background-repeat:no-repeat;
+  background-size: 500%;
+	
+  font-family:serif;
+	font-weight: 800;
+  
+}
+
+
+ 
+#snoop{
+  
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+header {
+
+  /*background: linear-gradient(315deg, rgba(101,0,94,1) 3%, rgba(60,132,206,1) 38%, rgba(48,238,226,1) 68%, rgba(255,25,25,1) 98%);
+  */background-color:rgb(0, 0, 0);
+  position:fixed;
+  z-index:63;
+  top:0px;
+  height:150px;
+  width:100%;
+  
+  text-align: center;
+  color: white;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+	font-size:225%;
+  float: left;
+  padding: 10px 0;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 23px;
+
+  position: relative;
+}
+
+nav a {
+  color: #ebebeb;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+
+}
+
+nav a:hover {
+  color: #fd8686;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #00D2FF;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+.page_title {
+  background-color: #62c798;
+    /*background: linear-gradient(315deg, rgba(101,0,94,1) 3%, rgba(60,132,206,1) 38%, rgba(48,238,226,1) 68%, rgba(255,25,25,1) 98%);
+  */background-color:rgb(36, 36, 36);
+  
+  position:fixed;
+  z-index:62;
+    padding: 30px 0px;
+    width:100%;
+    top:0px;
+    left:-2px;
+    height:200px;
+    padding-left: 40px;;
+}
+.page_title h1 {
+    color: #ffffff;
+    font-weight: 700;
+    line-height: 2;
+    margin-bottom: 0;
+    position: relative;
+    text-transform: capitalize;
+}
+.page_title h1::before {
+    background: #ff000070;
+    width: 70px;
+    height: 2px;
+    position: absolute;
+    content: '';
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.page_title h1::after {
+    position: absolute;
+    content: '';
+    background: #fbc531;
+    width: 30px;
+    height: 2px;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/*Menu starts*/
+.menu_tab {
+    margin: 0 auto;
+    justify-content: center;
+ 
+    position:fixed;
+    z-index:65;
+    top:165px;
+    left:40%;
+
+    
+}
+.nav-item {
+    display: inline-block;
+    text-align: center;
+    
+   
+}
+.nav-tabs .nav-link{
+    transition: .3s;
+}
+.nav-tabs .nav-link.active {
+    background: #4675f7;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 700;
+    border: 10px solid #4675f7;
+    text-transform: capitalize;
+}
+.nav-link {
+    color: #000;
+    border-radius: 5px;
+    border: 10px solid rgba(255, 57, 57, 0);
+    
+}
+.nav-tabs .nav-link:hover {
+    background: #4675f7;
+    color: #fff;
+    border-radius: 5px;
+    border: 10px solid #4675f7;
+}
+.single_menu {
+    position: relative;
+    margin-bottom: 75px;
+    transition: .3s;
+}
+.single_menu:hover img{
+    -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
+clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
+
+}
+.single_menu img {
+    width: 13%;
+    position: absolute;
+    height: 140px;
+    -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    transition: .3s;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.menu_content {
+    padding-left: 200px;
+}
+.menu_content h4 {
+    font-size: 25px;
+    font-weight: 300;
+    border-bottom: 1px dashed #9c9c9c;
+    line-height: 2;
+    text-transform: capitalize;
+}
+.menu_content h4 span {
+    font-size: 25px;
+    font-weight: 800;
+    float: right;
+    font-style: italic;
+    color: #ffffff;
+}
+.menu_content p {
+    font-weight: 200;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.menu_btn.btn.btn-danger {
+    margin: 0 auto;
+    display: block;
+    width: 140px;
+}
+/*Menu ends*/
+.menu_btn.btn.btn-danger {
+	margin: 0 auto;
+	display: block;
+	width: 140px;
+}
+.btn.btn-danger {
+	background: #a7b0ca;
+	border: 1px solid #b8bcc9;
+	transition: .3s;
+	position: relative;
+	z-index: 1;
+	text-transform: capitalize;
+	font-weight: 700;
+	overflow: hidden;
+	padding: 15px 25px;
+}
+.btn.btn-danger::before {
+	position: absolute;
+	content: '';
+	background: #e6b7b7;
+	width: 100%;
+	height: 100%;
+	left: -100%;
+	top: 100%;
+	transition: .3s;
+	z-index: -1;
+}
+.btn.btn-danger:hover:before{
+    top: 0;
+    left: 0;
+}
+span{
+background-color: rgba(51, 56, 31, 0.116);
+width:80px;
+padding-left:0px;
+border-radius: 2px;
+text-align: center;
+transition: background-color 0.15s;
+
+}
+span:hover
+{
+  background-color: rgba(245, 179, 103, 0);
+}
+
+
+
+p, li {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+
+  line-height: 22px;
+}
+
+
+
+  </style>
+<head>
+  
+</head>
+<body>
+ 
+  <header>
+    <div class="container">
+      <h1 class="logo"> Restaurant Marzouk</h1>
+  
+      <nav>
+        <ul>
+          <li><a href=""target="main.html">Home</a></li>
+          <li><a href=""target="menu.html">Menu</a></li>
+          <li><a href="contact.html">Contact US</a></li>
+        </ul>
+      </nav>
+    </div>
+   
+
+      </header>
+      <div style="position:absolute;left:0px;top:180px;width:60%;background-color:#fbc5313a;background-size: cover;"> 
+  <section id="our_menu" style="width:80% ; white-space:nowrap;overflow:hidden;" class="pt-5 pb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="page_title text-center mb-4">
+            <h1> </br>Menu</h1>
+            <div class="single_line"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row" id="snoop">
+        <ul class="nav nav-tabs menu_tab mb-4" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="breakfast-tab" data-toggle="tab" href="#breakfast" role="tab">Breakfast</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="lunch-tab" data-toggle="tab" href="#lunch" role="tab">Lunch</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="dinner-tab" data-toggle="tab" href="#dinner" role="tab">Dinner</a>
+          </li>
+        </ul>
+      </div>
+       <div class="row" style="width:100%">
+        <div class="tab-content col-lg-12" id="myTabContent">
+          <div class="tab-pane fade show active" id="breakfast" role="tabpanel" aria-labelledby="breakfast-tab">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="single_menu">
+                 
+<!-- food from here -->
+
+
+              
+                </div>
+                <div class="single_menu">
+                  <img src="https://pinchofyum.com/wp-content/uploads/Pancakes1.jpg"alt="pancakes">
+                  <div class="menu_content">
+                    <h4 >Pancakes<span id="hellop"> $10</span></h4>
+                    <p>Three buttermilk pancakes, 2 eggs your way, & 2 bacon strips or 3 pork sausage links</p>
+                  </div>
+                </div>
+                
+                
+                <div class="single_menu">
+                  <img src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fdam%2Fimageserve%2F1072007868%2F960x0.jpg%3Ffit%3Dscale" alt="coffee">
+                  <div class="menu_content">
+                    <h4>Coffee  <span id="hellop1">$2</span></h4>
+                    <p>100% arabica coffee. Endless refills.</p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-md-6">
+                <div class="single_menu">
+                  <img src="https://tmbidigitalassetsazure.blob.core.windows.net/rms3-prod/attachments/37/1200x1200/Easy-Morning-Waffles_EXPS_TOHPPMP_48564_E08_23_2b.jpg" alt="waffles">
+                  <div class="menu_content">
+                    <h4>Waffles  <span id="hellop2">$12</span></h4>
+                    <p>Two buttermilk waffles, 2 eggs your way, & 2 bacon strips or 3 pork sausage links.</p>
+                  </div>
+                </div>
+                
+
+
+
+                <div class="single_menu">
+                  <img src="https://www.sandraseasycooking.com/wp-content/uploads/2019/01/Croque-Monsieur-Sandwich-Recipe-1-720x540.jpg" alt="croque-monsieur">
+                  <div class="menu_content">
+                    <h4>Croque Monsieur<span id="hellop3">$15</span></h4>
+                    <p>French-style hot sandwich made with ham and cheese</p>
+                  </div>
+                </div>
+
+
+
+                <div class="single_menu">
+                  <img src="https://www.nestlehealthscience.us/asset-library/PublishingImages/recipes/Arginaid/ARGINAID_FruitJuice.jpg" alt="juice">
+                  <div class="menu_content">
+                    <h4>Juice<span id="hellop4">$3</span></h4>
+                    <p>Choice of Apple, Cranberry, Orange, or Grapefruit juice</p>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="tab-pane fade" id="lunch" role="tabpanel" aria-labelledby="lunch-tab">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="single_menu">
+                  <img src="https://i.imgur.com/Aowufa1.jpg" alt="pizza">
+                  <div class="menu_content">
+                    <h4>12" Pizza  <span id="hellop5">$15</span></h4>
+                    <p>Choice of toppings: cheese, pepperoni, sausage, mushrooms</p>
+                  </div>
+                </div>
+                <div class="single_menu">
+                  <img src="https://www.macheesmo.com/wp-content/uploads/2016/08/Sweet-Korean-Chicken-Wings-Main.jpg" alt="chicken wings">
+                  <div class="menu_content">
+                    <h4>Chicken Wings <span id="hellop6">$15</span></h4>
+                    <p>Choice of sauce: Korean-BBQ, sweet-n-sour, hot, extra hot</p>
+                  </div>
+                </div>
+                <div class="single_menu">
+                  <img src="https://www.thespruceeats.com/thmb/Q8tgENw4e3yDt9XfBh8tHP8zldg=/2500x1406/smart/filters:no_upscale()/caesar-salad-2500-56a210635f9b58b7d0c62d64.jpg" alt="caesar salad">
+                  <div class="menu_content">
+                    <h4>Caesar salad<span id="hellop7">$10</span></h4>
+                    <p>Romaine lettuce and croutons dressed with lemon juice and parmesan cheese.</p>
+                  </div>
+                </div>
+                <div class="single_menu">
+                  <img src="https://www.chickpeaslv.com/wp-content/uploads/2019/12/39-Fountain-Drink.jpg" alt="drinks">
+                  <div class="menu_content">
+                    <h4>Fountain Drinks<span id="hellop8">$3</span></h4>
+                    <p>Coke,mahmoud bo3lam,fanta, jus d'orange </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="single_menu">
+                  <img src="https://thumbor.thedailymeal.com/0n1OylLRNcU-RR_be3Z6ynYovOE=//https://www.thedailymeal.com/sites/default/files/story/2018/club%20hero%20iStock-509009307.jpg" alt="sandwich">
+                  <div class="menu_content">
+                    <h4>Club Sandwich<span id="hellop9">$10</span></h4>
+                    <p>Choice of turkey or ham on white or wheat bread. Comes with pickles and chips</p>
+                  </div>
+                </div>
+                <div class="single_menu">
+                  <img src="https://www.seriouseats.com/recipes/images/2016/03/20160403-spam-kimchi-fried-rice-21.jpg" alt="fried rice">
+                  <div class="menu_content">
+                    <h4>Kimchi Fried Rice<span id="hellop10">$15</span></h4>
+                    <p>Fried rice with kimchi and spam with a sunny side egg on top</p>
+                  </div>
+                </div>
+                <div class="single_menu">
+                  <img src="https://whatgreatgrandmaate.com/wp-content/uploads/2019/04/Whole30-Cobb-Salad-sq2-scaled.jpg" alt="cobb salad">
+                  <div class="menu_content">
+                    <h4>Cobb Salad<span id="hellop11">$15</span></h4>
+                    <p>Romain lettuce, hard boiled eggs, cherry tomatoes, bacon, avocado, and chicken</p>
+                  </div>
+                </div>
+              
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="dinner" role="tabpanel" aria-labelledby="dinner-tab">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="single_menu">
+                  <img src="https://d3awvtnmmsvyot.cloudfront.net/api/file/YOsRoERRftMRqJe4ucOw" alt="beef wellington">
+                  <div class="menu_content">
+                    <h4>Beef Wellington<span id="hellop12">$45</span></h4>
+                    <p>Filet Mignon, Truffle Duxelle, Puff Pasty, English peas, carrots, aligot potato puree</p>
+                  </div>
+                </div>
+                <div class="single_menu">
+                  <img src="https://images-gmi-pmc.edge-generalmills.com/e8b4f392-d17e-45dc-b142-1effc9a52db5.jpg" alt="beef stroganoff">
+                  <div class="menu_content">
+                    <h4>Short Rib Beef Stroganoff<span id="hellop13">$45</span></h4>
+                    <p>Buttered wide egg noodles, stroganoff sauce, black pepper creme fraiche</p>
+                  </div>
+                </div>
+                <div class="single_menu">
+                  <img src="https://www.cookingmaniac.com/wp-content/uploads/2016/05/pan-seared-seabass01.jpg" alt="seabass">
+                  <div class="menu_content">
+                    <h4>Pan Roasted Seabass<span id="hellop14">$45</span></h4>
+                    <p>pumpikin lobster risotto, maple black pepper brown butter</p>
+                  </div>
+                </div>
+                <div class="single_menu">
+                  <img src="https://images.food52.com/okL8gO11zIZNdI_DfSspe1CDdJI=/1200x1200/cea3c36f-5350-4872-bba2-bb4c50900bba--2019-0514_jalapeno-marinated-lamb-chops-minted-pea-salad_3x2_rocky-luten_015.jpeg" alt="lamb chops">
+                  <div class="menu_content">
+                    <h4>Lamb Chops<span id="hellop15">$35</span></h4>
+                    <p>smoked eggplant puree, roasted cherry tomato couscous salad.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="single_menu">
+                  <img src="https://lh3.googleusercontent.com/proxy/YoOwqXsoO-9fLJeprSu_VQfPvihivD-glP8M-ufjjZKkGpMjKOGg_HMNf8wvbR9hKTRl9gyDq57DtNuu-yQHaw0rnkcV9c6ELagWhauBBV7-6UhQV8Pwt1uXCFJ9qK1FCDcPvt7rjTlFmC4" alt="seafood pie">
+                  <div class="menu_content">
+                    <h4>Lobster Seafood Pie<span id="hellop16">$32</span></h4>
+                    <p>Maine lobster, haddock, scallops, peas, carrots, mushrooms, and puff pastry. </p>
+                  </div>
+                </div>
+                <div class="single_menu">
+                  <img src="https://i.pinimg.com/originals/0d/83/f2/0d83f23a9b58767d440002b488e096b3.jpg" alt="steak">
+                  <div class="menu_content">
+                    <h4>14 Oz. Angus NY Strip<span id="hellop17">$35</span></h4>
+                    <p>green peppercorn sauce, roasted green beans and tomatoes</p>
+                  </div>
+                </div>
+                <div class="single_menu">
+                  <img src="https://thecozyapron.com/wp-content/uploads/2019/12/roasted-chicken-breasts_thecozyapron_1.jpg" alt="roasted chicken">
+                  <div class="menu_content">
+                    <h4>Roasted Chicken Breast<span id="hellop18">$45</span></h4>
+                    <p>Stuffed with mushroom duxelle, pea puree, roasted fingerling potatoes</p>
+                  </div>
+                </div>
+                <div class="single_menu">
+                  <img src="https://www.thespruceeats.com/thmb/ajZjol3pJvcaP9V4jMWNfRrgYSg=/1333x1000/smart/filters:no_upscale()/best-fish-and-chips-recipe-434856-Hero-5b61b89346e0fb00500f2141.jpg" alt="fish and chips">
+                  <div class="menu_content">
+                    <h4>Fish & Chips<span id="hellop19">$25</span></h4>
+                    <p>Fresh Cod, ale batterred, tartar sauce</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  
+<div>
+</div>
+</div>
+<div id="ultron" style=" font-size:20px;width:180px;background-color: #d9ff0000;               height:1500px;position:fixed ;left:0px;top:200px;">
+
+<div style="background-image: url(shopping-cart-alt.svg); width:150px;height:150px;position:absolute;left:0px;"></div>
+<br><br><br><br><br><br><br><br>
+purchased-food:
+</div>
+  
+  </section>
+</body>
+<script>
+let currentElement = document.getElementById("hellop");
+var clickCounts = {};    
+let xx;
+var divArray = [];
+var divImage= ["pinchofyum.com/wp-content/uploads/Pancakes1.jpg","https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fdam%2Fimageserve%2F1072007868%2F960x0.jpg%3Ffit%3Dscale","https://tmbidigitalassetsazure.blob.core.windows.net/rms3-prod/attachments/37/1200x1200/Easy-Morning-Waffles_EXPS_TOHPPMP_48564_E08_23_2b.jpg","https://www.sandraseasycooking.com/wp-content/uploads/2019/01/Croque-Monsieur-Sandwich-Recipe-1-720x540.jpg","https://www.nestlehealthscience.us/asset-library/PublishingImages/recipes/Arginaid/ARGINAID_FruitJuice.jpg","https://i.imgur.com/Aowufa1.jpg","https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fdam%2Fimageserve%2F1072007868%2F960x0.jpg%3Ffit%3Dscale"]
+
+
+
+
+let xyz= document.getElementById("ultron");
+    currentElement.addEventListener("click", function(event) {
+            if (event.target === currentElement) {
+                currentElement.style.backgroundColor = "white";
+                setTimeout(function() {
+                    currentElement.style.backgroundColor = ""; 
+                }, 100); 
+            }
+        });
+    
+        currentElement.addEventListener("mousemove", function(event) {
+            currentElement.style.cursor = "default";
+        });
+    
+    
+        for (let i = 1; i <= 19; i++) {
+        let currentElement = document.getElementById("hellop" + i);
+        
+        currentElement.addEventListener("click", function(event) {
+            if (event.target === currentElement) {
+                currentElement.style.backgroundColor = "white";
+    if (clickCounts[i] >= 0)            
+    clickCounts[i] += 1;
+    
+ else 
+ clickCounts[i]=0;
+    
+  xx=0;  
+ for (let j=1;j<=i;j++){
+  if (clickCounts[j] >= 0)
+  xx+=Math.min(clickCounts[j]+1,1);
+else
+xx+=0;}   
+
+if (clickCounts[i]===0){
+ var div = document.createElement('div');
+ divArray[i]= div;
+            
+            divArray[i].textContent='gggggg';
+            divArray[i].style.width = '150px';
+            divArray[i].style.height = '50px';
+            
+            divArray[i].style.backgroundImage = "url("+ divImage[i] +")";
+            divArray[i].style.backgroundSize="100% 100%"
+
+            divArray[i].style.position = 'absolute';
+            divArray[i].style.zIndex = '40'; 
+            divArray[i].style.left = ' 0px';
+            divArray[i].style.top = (250 + xx*120+'px'); 
+            divArray[i].style.borderRadius = '5px'; 
+            
+            divArray[i].textContent = itemId;
+            
+          
+            xyz.appendChild(divArray[i]);
+ 
+        var itemId = event.target.id;
+}
+for (let j =i ;j<=19;j++){
+  xx=0;
+  if(clickCounts[j]>=0 ){
+  for (let zz=1;zz<j;zz++){
+
+if (clickCounts[zz]>=0 )
+xx +=1;}
+  divArray[j].style.top =250+xx*55+'px'  ; 
+
+ }  }
+        clickCounts[itemId]++;
+        console.log("helo")
+      
+        console.log(itemId + ' clicked ' + clickCounts[i] + ' times.');
+                setTimeout(function() {
+                    currentElement.style.backgroundColor = ""; 
+                }, 100); 
+            }
+        });
+    
+        currentElement.addEventListener("mousemove", function(event) {
+            currentElement.style.cursor = "default";
+        });
+    
+       
+            
+            
+            console.log(' times.');
+    }
+    
+    
+  
+     
+    
+
+    
+    
+   
+      
+            
+           
+            
+            
+           
+            
+         
+           
+            
+            
+  
+    
+    
+    
+    
+    
+    
+
+</script>
+</html>
